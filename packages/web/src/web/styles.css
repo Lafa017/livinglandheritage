@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.375rem;
+  --background: #FAF6F0;
+  --foreground: #241C15;
+  --card: #F1E9DC;
+  --card-foreground: #241C15;
+  --popover: #FAF6F0;
+  --popover-foreground: #241C15;
+  --primary: #8C5A34;
+  --primary-foreground: #FAF6F0;
+  --secondary: #3E4B3A;
+  --secondary-foreground: #FAF6F0;
+  --muted: #F1E9DC;
+  --muted-foreground: #6B5C4C;
+  --accent: #C69A4B;
+  --accent-foreground: #241C15;
+  --destructive: #b3413a;
+  --border: rgba(140, 90, 52, 0.2);
+  --input: rgba(140, 90, 52, 0.25);
+  --ring: #C69A4B;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.12) translate(-1%, -1%); }
+}
+.animate-kenburns {
+  animation: kenburns 18s ease-out forwards;
+}
