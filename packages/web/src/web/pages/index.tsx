@@ -48,25 +48,41 @@ function Nav() {
           <span className="text-[#C69A4B]">Heritage</span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium uppercase tracking-wider transition-colors hover:text-[#C69A4B] ${
-                scrolled ? "text-[#241C15]" : "text-[#FAF6F0]"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#contacto"
-            className="border border-current px-5 py-2 text-sm font-semibold uppercase tracking-wider text-[#C69A4B] transition-colors hover:bg-[#C69A4B] hover:text-[#241C15]"
-          >
-            Agenda una visita
-          </a>
-        </nav>
+       <nav className="hidden items-center gap-8 lg:flex flex-col">
+
+  {/* Opciones principales */}
+  <div className="flex items-center gap-8">
+    {NAV_LINKS.map((link) => (
+      <a
+        key={link.href}
+        href={link.href}
+        className={`text-sm font-medium uppercase tracking-wider transition-colors hover:text-[#C69A4B] ${
+          scrolled ? "text-[#241C15]" : "text-[#FAF6F0]"
+        }`}
+      >
+        {link.label}
+      </a>
+    ))}
+
+    <a
+      href="#contacto"
+      className="border border-current px-5 py-2 text-sm font-semibold uppercase tracking-wider text-[#C69A4B] transition-colors hover:bg-[#C69A4B] hover:text-[#241C15]"
+    >
+      Agenda una visita
+    </a>
+  </div>
+
+  {/* Enlace de nacionalidad debajo del menú */}
+  <a
+  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20hacer%20la%20nacionalidad%20mexicana%20con%20ustedes`}
+  target="_blank"
+  rel="noreferrer"
+  className="relative bottom-2 left-65 text-xs font-semibold uppercase tracking-wider text-[#FAF6F0] transition-colors hover:text-[#C69A4B]"
+>
+  ¿Quieres hacer la nacionalidad con nosotros?
+</a>
+
+</nav>
 
         <button
           onClick={() => setOpen((v) => !v)}
