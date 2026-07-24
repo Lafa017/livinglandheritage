@@ -375,7 +375,7 @@ function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3 hover:text-[#8C5A34]"
             >
-              <Phone className="h-4 w-4 text-[#8C5A34]" /> +52 762 123 4567
+              <Phone className="h-4 w-4 text-[#8C5A34]" /> +52 733 108 9378
             </a>
             <a href="mailto:contacto@livinglandheritage.com" className="flex items-center gap-3 hover:text-[#8C5A34]">
               <Mail className="h-4 w-4 text-[#8C5A34]" /> contacto@livinglandheritage.com
