@@ -24,7 +24,7 @@ const NAV_LINKS = [
 ];
 
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=livinglandheritage";
-const WHATSAPP_NUMBER = "527621234567"; // TODO: reemplazar con el número real
+const WHATSAPP_NUMBER = "527331089378"; // TODO: reemplazar con el número real
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
